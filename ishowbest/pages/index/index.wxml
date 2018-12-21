@@ -1,0 +1,148 @@
+<!--首页-->
+<!--后面背景图-->
+<image class='bg' src='../../images/index/1_01.png' mode='widthFix'></image>
+<!--轮播图-->
+<view class='swiper'>
+  <swiper indicator-dots='{{true}}' autoplay='{{true}}' interval='3000' circular='{{true}}'>
+    <swiper-item>
+      <image src='../../images/index/banner.png' mode='widthFix' style='width:680rpx;'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/index/banner.png' mode='widthFix' style='width:680rpx;'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/index/banner.png' mode='widthFix' style='width:680rpx;'></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!--菜单栏-->
+<view class='navBar'>
+  <view class='nav-list'>
+    <view wx:for='{{navlist}}' wx:key="{{id}}" bindtap="open" data-id="{{item.id}}">
+      <view class='nav-item'>
+        <image class='item-img' src='{{item.url}}'></image>
+        <text class='item-text'>{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='line'></view>
+<!--新人有礼-->
+<view class='new'>
+  <image src='../../images/index/new.png' mode='widthFix' style='width:90%;'></image>
+</view>
+<view class='line'></view>
+<!--搜索框-->
+<view class='searchbox'>
+  <input class='search' placeholder='请输入信息...' placeholder-style='color:#bbb;'></input>
+  <navigator>
+    <image src='../../images/index/search.png' mode='widthFix' class='searchicon'></image>
+  </navigator>
+</view>
+<view class='line'></view>
+<!--福利专区-->
+<view class='fuli'>
+  <view class="header">
+    <image src='../../images/index/logo.png' mode='widthFix' class='logo'></image>
+    <text class='title'>福利专区</text>
+  </view>
+  <view class="fulibox">
+    <image src='../../images/index/1_24.png' mode="widthFix" style='margin-right:15rpx;' bindtap='openQd'></image>
+    <image src='../../images/index/1_22.png' mode='widthFix'></image>
+  </view>
+</view>
+<view class='line'></view>
+<!--新人专区-->
+<view class='fuli'>
+  <view class="header">
+    <image src='../../images/index/logo.png' mode='widthFix' class='logo'></image>
+    <text class='title'>新人专区</text>
+  </view>
+  <view class='newband'>
+    <image src='../../images/index/newband.png' mode='widthFix'></image>
+  </view>
+</view>
+<view class='line'></view>
+<!--全球美妆馆-->
+<view class='word'>
+  <view class='header'>
+    <image src='../../images/index/logo.png' mode='widthFix' class='logo'></image>
+    <text class='title'>全球美妆馆</text>
+  </view>
+</view>
+<view class='line'></view>
+<!--中式馆-->
+<view class='china'>
+  <image src='../../images/index/1_39.png' class='Ctitle' mode='widthFix' style='width:40%;'></image>
+  <image src='../../images/index/china.png' mode='widthFix' style='width:100%;margin-top:-50rpx;'></image>
+</view>
+<!-- 中式馆商品 -->
+<view class='details'>
+  <!-- <view class='first'>
+    <view class='detail_img'>
+      <image src=''></image>
+    </view>
+  </view>
+  <view class='sec'></view> -->
+  <image src='../../images/index/1_59.png' mode='widthFix' class='first'></image>
+  <image src='../../images/index/1_59.png' mode='widthFix' class='sec'></image>
+</view>
+<!--韩式馆-->
+<view class='china'>
+  <image src='../../images/index/1_39.png' class='Ctitle' mode='widthFix' style='width:40%;'></image>
+  <image src='../../images/index/1_03.png' mode='widthFix' style='width:100%;margin-top:-50rpx;'></image>
+</view>
+<!-- 韩式馆商品 -->
+<view class='details'>
+  <!-- <view class='first'>
+    <view class='detail_img'>
+      <image src=''></image>
+    </view>
+  </view>
+  <view class='sec'></view> -->
+  <image src='../../images/index/1_59.png' mode='widthFix' class='first'></image>
+  <image src='../../images/index/1_59.png' mode='widthFix' class='sec'></image>
+</view>
+<!--欧美馆-->
+<view class='china'>
+  <image src='../../images/index/1_39.png' class='Ctitle' mode='widthFix' style='width:40%;'></image>
+  <image src='../../images/index/oumei.png' mode='widthFix' style='width:100%;margin-top:-50rpx;'></image>
+</view>
+<!-- 欧美馆商品 -->
+<view class='details'>
+  <!-- <view class='first'>
+    <view class='detail_img'>
+      <image src=''></image>
+    </view>
+  </view>
+  <view class='sec'></view> -->
+  <image src='../../images/index/1_59.png' mode='widthFix' class='first'></image>
+  <image src='../../images/index/1_59.png' mode='widthFix' class='sec'></image>
+</view>
+<!--日系馆-->
+<view class='china'>
+  <image src='../../images/index/1_39.png' class='Ctitle' mode='widthFix' style='width:40%;'></image>
+  <image src='../../images/index/japan.png' mode='widthFix' style='width:100%;margin-top:-50rpx;'></image>
+</view>
+<!-- 日系馆商品 -->
+<view class='details'>
+  <!-- <view class='first'>
+    <view class='detail_img'>
+      <image src=''></image>
+    </view>
+  </view>
+  <view class='sec'></view> -->
+  <image src='../../images/index/1_59.png' mode='widthFix' class='first'></image>
+  <image src='../../images/index/1_59.png' mode='widthFix' class='sec'></image>
+</view>
+
+<!-- 签到 -->
+<view class='qdbox' wx:if="{{isScroll}}">
+  <view wx:if="{{qiandao}}">
+    <image src='../../images/qiandao/ljqd.png' mode='widthFix' class='qiandao' bindtap='wcQd'></image>
+  </view>
+  <view wx:else>
+    <image src='../../images/qiandao/wcqd.png' mode='widthFix' class='qiandao' bindtap='offQd'></image>
+  </view>
+</view>
+<view class='qdok' wx:else></view>

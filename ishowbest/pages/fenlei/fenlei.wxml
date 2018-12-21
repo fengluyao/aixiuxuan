@@ -1,0 +1,31 @@
+<view class='main'>
+  <!-- 左边半部分 -->
+  <scroll-view class='left' scroll-y>
+    <view class='nav_list' wx:for="{{navlist}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchCategory">
+      <view class='kuai' wx:if="{{curIndex===index}}"></view>
+      <text class='nav_name {{curIndex===index?"on":""}}'>{{item.name}}</text>
+    </view>
+  </scroll-view>
+  <!-- 右边半部分 -->
+  <scroll-view class='right' scroll-y scroll-into-view="{{toView}}">
+    <view class='content' wx:if="{{curnav==0}}">
+      <view wx:for="{{content}}" wx:key="{{item.id}}">
+        <image src='{{item.url}}' mode='widthFix' style='width:100%;'></image>
+      </view>
+    </view>
+    <view class='content1' wx:elif="{{curnav==1}}" bindtap='next'>
+      <view wx:for="{{hufu}}" wx:key="{{item.id}}" class='box'>
+        <image src='{{item.url}}' mode='widthFix' style="width:150rpx;"></image>
+        <text>{{item.name}}</text>
+        <image src='{{item.bottom}}' mode='widthFix' style='width:150rpx;'></image>
+      </view>
+    </view>
+    <view class='content2' wx:elif="{{curnav==2}}">
+      <view wx:for="{{caizhuang}}" wx:key="{{item.id}}" class='box'>
+        <image src='{{item.url}}' mode='widthFix' style="width:150rpx;"></image>
+        <text>{{item.name}}</text>
+        <image src='{{item.bottom}}' mode='widthFix' style='width:150rpx;'></image>
+      </view>
+    </view>
+  </scroll-view>
+</view>
